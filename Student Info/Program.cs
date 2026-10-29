@@ -21,9 +21,8 @@ namespace Student_Info
 
             using (HttpClient httpClient = new HttpClient())
             {
-                httpClient.BaseAddress = 
-                    //new Uri("https://studentinfoapi-7lpw.onrender.com/api/students");
-                    new Uri("http://localhost:5128/api/students");
+                httpClient.BaseAddress =
+                    new Uri("https://studentinfoapi-7lpw.onrender.com/api/students");
                 httpClient.Timeout = TimeSpan.FromSeconds(30);
 
                 IStudentDataServices studentDataServices = new StudentAPIService(httpClient);
